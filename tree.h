@@ -8,6 +8,7 @@
 #define TREE_H
 
 #include "pes.h"
+#include <stdint.h>   // ✅ ensure uint32_t is defined
 
 #define MAX_TREE_ENTRIES 1024
 
@@ -22,6 +23,9 @@ typedef struct {
     int count;
 } Tree;
 
+// 🔥 ADD THIS FUNCTION DECLARATION (CRITICAL FIX)
+uint32_t get_file_mode(const char *path);
+
 // Parse raw tree object data (as read from the object store) into a Tree struct.
 int tree_parse(const void *data, size_t len, Tree *tree_out);
 
@@ -31,11 +35,6 @@ int tree_parse(const void *data, size_t len, Tree *tree_out);
 int tree_serialize(const Tree *tree, void **data_out, size_t *len_out);
 
 // Build a Tree from the current index contents.
-// This is what `pes commit` uses: it reads the index and constructs a tree
-// hierarchy that represents the staged snapshot. For nested paths
-// (e.g., "src/main.c"), this function must create subtrees.
-// Writes all tree objects to the object store.
-// Returns the root tree's ObjectID in *id_out.
 int tree_from_index(ObjectID *id_out);
 
 #endif // TREE_H

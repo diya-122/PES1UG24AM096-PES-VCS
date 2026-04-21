@@ -2,26 +2,36 @@ CC = gcc
 CFLAGS = -Wall -Wextra -O2
 LDFLAGS = -lcrypto
 
-# ─── Main binary ─────────────────────────────────────────────────────────────
+# ─── Main binary ─────────────────────────────────────────
 
 SRCS = object.c tree.c index.c commit.c pes.c
 OBJS = $(SRCS:.c=.o)
 
 pes: $(OBJS)
-	$(CC) -o $@ $^ $(LDFLAGS)
+	$(CC) -o $@ $(OBJS) $(LDFLAGS)
 
+# Compile rule
 %.o: %.c pes.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# ─── Test binaries ───────────────────────────────────────────────────────────
+# ─── Test binaries ──────────────────────────────────────
 
+# Phase 1
 test_objects: test_objects.o object.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-test_tree: test_tree.o object.o tree.o
+# Phase 2 (IMPORTANT: include index.o)
+test_tree: test_tree.o object.o tree.o index.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-# ─── Convenience targets ────────────────────────────────────────────────────
+# Ensure test object files are built correctly
+test_objects.o: test_objects.c pes.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+test_tree.o: test_tree.c pes.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# ─── Convenience targets ────────────────────────────────
 
 .PHONY: all clean test test-unit test-integration
 
