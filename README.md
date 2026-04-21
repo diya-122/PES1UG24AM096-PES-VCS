@@ -104,19 +104,23 @@ pointer atomically.
 
 ### Screenshot 4A — `pes log` with three commits
 
+<img width="699" height="529" alt="image" src="https://github.com/user-attachments/assets/9894c861-447c-4994-950f-3ea6bef7e757" />
 
 ### Screenshot 4B — `find .pes -type f | sort`
 
-
+<img width="768" height="307" alt="image" src="https://github.com/user-attachments/assets/64dd31b7-6338-4073-ad38-43c57394511f" />
 
 ### Screenshot 4C — Reference chain
 
+<img width="749" height="91" alt="image" src="https://github.com/user-attachments/assets/54c4a734-a073-4f3a-8506-05dca98eba47" />
 
 ### Final — `make test-integration`
 
+<img width="726" height="742" alt="image" src="https://github.com/user-attachments/assets/6acc21bb-5bcf-4593-8b69-ac429aea23bb" />
 
+<img width="703" height="618" alt="image" src="https://github.com/user-attachments/assets/7af2621c-bd3f-467d-a163-8c9f70e7122c" />
 
-
+<img width="783" height="491" alt="image" src="https://github.com/user-attachments/assets/d7eb2f24-1ec5-4b54-bd55-3902dbb3a2d6" />
 
 ---
 
