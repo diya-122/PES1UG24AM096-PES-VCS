@@ -1,7 +1,7 @@
 # PES-VCS Lab Report
 
-**Name:** Diya Agarwal
-**SRN:** PES1UG24AM096
+**Name:** Diya Agarwal<br>
+**SRN:** PES1UG24AM096<br>
 **Platform:** Ubuntu 24.04
 
 ---
