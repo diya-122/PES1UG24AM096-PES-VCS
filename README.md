@@ -10,7 +10,7 @@
 
 ```bash
 sudo apt update && sudo apt install -y gcc build-essential libssl-dev
-export PES_AUTHOR="Prajwal G <PES1UG24CS590>"
+export PES_AUTHOR="Diya Agarwal <PES1UG24AM096>"
 make all
 ```
 
@@ -61,7 +61,7 @@ object store.
 
 ### Screenshot 2B — `xxd` of a raw tree object
 
-![Phase 2B](images/2b.png)
+<img width="1418" height="157" alt="image" src="https://github.com/user-attachments/assets/868ec384-4881-4461-9ee5-73505de1390a" />
 
 ---
 
@@ -83,11 +83,11 @@ calls `index_save`.
 
 ### Screenshot 3A — `pes init` → `pes add` → `pes status`
 
-![Phase 3A](images/3a.png)
+<img width="823" height="803" alt="image" src="https://github.com/user-attachments/assets/84347f9e-84f1-4400-b9f7-f0b3db5dbb68" />
 
 ### Screenshot 3B — `cat .pes/index`
 
-![Phase 3B](images/3b.png)
+<img width="863" height="91" alt="image" src="https://github.com/user-attachments/assets/5a47f969-b3be-4516-bcbe-7b621ba3d59c" />
 
 ---
 
@@ -104,23 +104,18 @@ pointer atomically.
 
 ### Screenshot 4A — `pes log` with three commits
 
-![Phase 4A](images/4a.png)
 
 ### Screenshot 4B — `find .pes -type f | sort`
 
-![Phase 4B](images/4b.png)
+
 
 ### Screenshot 4C — Reference chain
 
-![Phase 4C](images/4c.png)
 
 ### Final — `make test-integration`
 
-![Integration test part 1](images/final_a.png)
 
-![Integration test part 2](images/final_b.png)
 
-![Integration test part 3](images/final_c.png)
 
 
 ---
